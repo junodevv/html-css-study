@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent p:first-child {
+            color: lightpink;
+        }
+        .parent p:first-of-type {
+            color: lightpink;
+        }
+        .container {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .container:hover{
+            background-color: lightcoral;
+        }
+        .focus-input:focus{
+            background-color: lightgrey;
+        }
+        /* ">" 자식결합자 */
+        /* container-two>div == 컨테이너two 자식인 div 선택 */
+        .container-two > div{
+            margin-top: 30px;
+            background-color: lightpink;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        /* 컨테이너two 자식인 div중 홀수번쨰 자식들 선택 */
+        .container-two > div:nth-child(2n+1){
+            background-color: lightskyblue;
+        }
+        .container-two > :last-child{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-box">
+        Mouse Hover
+    </div>
+
+    <input class="focus-input" type="text">
+
+    <div class="container-two">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="parent">
+        <span>A</span>
+        <p>B</p>
+        <p>C</p>
+    </div>
+</body>
+</html>
