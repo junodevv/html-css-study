@@ -1,3 +1,4 @@
+/********** button A ***********/
 .a-button {
     background-color: rgb(20, 40, 192);
     color: white;
@@ -33,4 +34,29 @@
 .a-button:active {
     opacity: 0.3;
 }
+
+/********** button B ***********/
+
+.b-button{
+    background-color: white;
+    border-color: rgb(212, 6, 64);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(6, 95, 212);
+    cursor: pointer;
+    padding: 9px 16px 9px 16px;
+
+    transition: background-color 3s, color 0.15s;
+}
+
+.b-button:hover{
+    background-color: rgb(6, 95, 212);
+    color: white;
+}
+
+.b-button:active{
+    opacity: 0.7;
+}
+
+
 
