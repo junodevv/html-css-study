@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            float: left;
+            margin-right: 30px;
+            font-size: 32px;
+            list-style: none;
+        }
+        /* 모든 li 요소의 뒤(after)에 해당 특정 내용을 추가한다. */
+        li::after{
+            content: ' |';
+        }
+        /* li요소 중 마지막 자식은 뒤(before)에는 ' '를 추가 */
+        li:last-of-type::after{
+            content: ' ';
+        }
+        /* li요소중 첫번째 자식 앞(before)에 내용 추가 */
+        li:first-of-type::before {
+            content: '시작 ';
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+</body>
+</html>
