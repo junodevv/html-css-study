@@ -1,0 +1,36 @@
+.a-button {
+    background-color: rgb(20, 40, 192);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* transition: <property> <duration> */
+/*     
+    transition: opacity 1s;
+    transition: background-color 3s ease-in;
+*/
+    /* 이렇게 써도됨*/
+    transition: opacity 1s, background-color 3s ease-in;
+    /* 모든 변화 속성에 transition 적용하기: all */
+/* 
+    transition: all 1s ease-out;
+*/
+    
+}
+/* 마우스 올렸을때 */
+.a-button:hover {
+/* opacity: 불투명 */
+    opacity: 0.7; 
+    background-color: black;
+}
+/* 마우스 클릭했을때 */
+.a-button:active {
+    opacity: 0.3;
+}
+
