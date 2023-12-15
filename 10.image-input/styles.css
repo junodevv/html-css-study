@@ -1,0 +1,12 @@
+.image {
+    width: 400px;
+    height: 400px;
+    
+    /* fill = 기본값 */
+    /* cover = 종횡비 유지하고 주어진 치수 채우기, 대신 좀 잘릴 수 있음 */
+    /* scale-down = 가장 작은 버전 */
+    object-fit: contain;
+    
+    /* 위치 배치 */
+    object-position: left;
+}
