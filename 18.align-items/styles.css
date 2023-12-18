@@ -1,0 +1,31 @@
+.container{
+    border: 6px solid lightgray;
+    display: flex;    
+    /* flex-direction: row(기본) | row-reverse | column | column-reverse; */
+    /* flex-wrap: nowrap(기본) | wrap | wrap-reverse */
+    /* flex-flow = flex-direction + flex-wrap */
+    /* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly */
+    height: 500px;
+    /* align-items: flex-start | flex-end | center | stretch | baseline*/
+    align-items: baseline;
+}
+
+.flex-item{
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.item-1{
+    background-color: lightblue;
+    padding-bottom: 3rem;
+}
+.item-2{
+    background-color: lightpink;
+    padding-top: 7rem;
+}
+.item-3{
+    background-color: lightyellow;
+    padding-top: 10rem;
+}
