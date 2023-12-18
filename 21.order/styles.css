@@ -1,0 +1,35 @@
+.container{
+    border: 6px solid lightgray;
+    display: flex;    
+    height: 500px;
+    width: 600px;
+}
+
+.flex-item{
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.item-1{
+    background-color: lightblue;
+    /* 기본값 = order: 0; */
+}
+.item-2{
+    background-color: lightpink;
+    order: -1;
+}
+.item-3{
+    background-color: lightyellow;
+}
+.item-4{
+    background-color: lightgreen;
+}
+.item-5{
+    background-color: lightsalmon;
+    order: 6;
+}
+.item-6{
+    background-color: skyblue;
+}
