@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        .box-container{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #669966;
+        }
+        .box-container div{
+            padding: 10px;
+            border: 1px solid green;
+            background-color: #ffdddd;
+        }
+        /* static: 기본값, 임의로 위치설정 불가 */
+        #static-box{
+            position: static;
+            /* 아래 css가 적용되지 않음 */
+            top: 20px;
+            left: 30px;
+        }
+        /* relative: 원래있던 위치를 기준으로 좌표를 지정 */
+        #relative-box{
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+        /* absolute: 부모요소에 static이 아닌것이 있으면 그것을 기준으로 배치하고
+                     static이 아닌것이 없으면 body를 기준으로 배치한다. */
+        #absolute-box{
+            position: absolute;
+            top: 20px;
+            right: 150px;
+        }
+        /* fixed: 스크롤에 상관없이 문서 최 좌측, 스크롤 내리면 따라내려감 */
+        #fixed-box{
+            position:fixed;
+            top:20px;
+            right: 30px;
+        }
+
+        #relative-box-1{
+            position: relative;
+            height: 80px;
+            margin-top: 70px;
+            border: 3px dotted #669966;
+            width: 200px;
+        }
+        #absolute-box-1{
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            border: 2px solid #ffdddd;
+        }
+        
+        .sticky{
+            position: sticky;
+            border: 2px solid #ffdddd;
+            background-color: #669999;
+            top: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div id="static-box">static</div>
+        <div id="relative-box">relative</div>
+        <div id="absolute-box">absolute</div>
+        <div id="fixed-box">fixed</div>
+    </div>
+    
+    <div id="relative-box-1">
+        relative
+        <div id="absolute-box-1">
+            absolute
+        </div>
+    </div>
+    
+    <div class="sticky">Sticky!!</div>
+    <div style="padding-bottom: 2000px;">
+        스크롤의 위치에 따라 static 요소와 fixed 요소 사이를 전환한다.
+        스크롤의 위치에 따라 static 요소와 fixed 요소 사이를 전환한다.
+        스크롤의 위치에 따라 static 요소와 fixed 요소 사이를 전환한다.
+        스크롤의 위치에 따라 static 요소와 fixed 요소 사이를 전환한다.
+
+    </div>
+</body>
+</html>
