@@ -1,0 +1,69 @@
+.header{
+    width: 100%;
+    height: 44px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 2;
+    border-bottom: 1px solid #dbdbdb;
+}
+.header_content{
+    width: 100%;
+    max-width: 975px;
+    padding: 0 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo{
+    margin-top: 5px;
+}
+.header_search{
+    width: 216px;
+    height: 28px;
+    display: none; /* 반응형으로 화면이 클때만 검색요소가 나오게 하기위해 기본으로 none을 넣었다. */
+    align-items: center;
+    position:relative;
+}
+@media (min-width: 768px){
+    .header_search{
+        display: flex;
+    }
+}
+.header_search img {
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    top: 8px;
+    left:8px;
+}
+.header_search input{
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    padding: 4px 10px 4px 28px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    outline: none; /*외곽 선, input box를 눌렀을때 주변에 파란색으로 변하는데 이걸 없내는 것임*/
+    font-size: 12px;
+    font-weight: 300;
+    color: #999999;
+    text-overflow: hidden;
+    white-space: nowrap; /* 줄바꿈이 일어나지 않게 함 */
+}
+.header_search input:focus{
+    color: #262626;
+}
+.header_buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.profile_picture{
+    width: 24px;
+    border-radius: 50%;
+}
