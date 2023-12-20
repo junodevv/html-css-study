@@ -63,6 +63,24 @@
     width: 24px;
     border-radius: 50%;
 }
+/* header_theme */
+.header_theme-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.header_theme-button-sun{
+    display: none;
+}
+.header_theme-button-moon{
+    display: unset;
+}
+:root.darkTheme .header_theme-button-sun{
+    display: unset;
+ }
+ :root.darkTheme .header_theme-button-moon{
+    display: none;
+ }
 @media (min-width: 768px){
     .header_search{
         display: flex;
