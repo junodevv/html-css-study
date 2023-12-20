@@ -39,38 +39,6 @@
     flex-direction: column;
     gap: 8px;
 }
-/* Media Queries */
-/* 620px 보다 크면 */
-@media (min-width: 620px) {
-    .content-container{
-        padding: 30px 0 24px;
-    }
-    .content{
-        gap:24px;
-    }
-    .stories{
-        border: 1px solid #DBDBDB;
-        border-radius: 4px;
-    }
-    .stories::after{
-        content:none;
-    }
-    .posts{
-        gap: 24px;
-    }
-    .post{
-        border: 1px solid #DBDBDB;
-        border-radius: 4px;
-    }
-}
-@media (min-width: 1024px){
-    .main-container{
-        background-color: #fafafa;
-    }
-    .content{
-        margin: unset;
-    }
-}
 /* Story */
 .story{
     background-color: transparent;
@@ -122,7 +90,184 @@
     scroll-behavior: smooth;
     scrollbar-width:none;
 }
-/* 스크롤 바를 안보이게 해주는 것 */
-.stories_content::-webkit-scrollbar{
+.stories_content::-webkit-scrollbar{ /* 스크롤 바를 안보이게 해주는 것 */
+    display: none;  
+}
+
+/* Post */
+    /* Post/header */
+.post{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.post_header{
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+.post_profile{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.post_avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.post_user{
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+.post_user:hover{
+    text-decoration: underline;
+}
+.post_more-options{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+    /* Post/content */
+.post_content{
+    display: flex;
+    position: relative;
+}
+.post_medias{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    width: 100%;
+    scroll-snap-type: x mandatory; /*  */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.post_medias::-webkit-scrollbar{
     display: none;
+}
+.post_media{
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+    /* Post/footer */
+.post_footer{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 4px;
+}
+.post_buttons{
+    display: flex;
+    position: relative;
+}
+.post_button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 8px;
+}
+.post_button--align-right{    
+    margin-left: auto; /* 이렇게 하면 오른쪽 끝으로 붙여준다. 반대로 margin-right하면 왼쪽 끝으로 붙임 */
+}
+
+.post_infos{
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    gap: 10px;
+}
+.post_likes,
+.post_description{
+    display: flex;
+}
+
+.post_likes{
+    align-items: center;
+    gap: 6px;
+}
+.post_likes-avatar{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.post_likes span,
+.post_description span{
+    font-size:14px;
+    font-weight: 400;
+    color: #262626;
+}
+.post_likes a,
+.post_description a{
+    font-size:14px;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: none;
+}
+
+.post_name--underline:hover{
+    text-decoration: underline;
+}
+.post_date-time{
+    font-size:10px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: uppercase;
+}
+/* 
+미디어 쿼리는 중간에 써 놓으면 그 다음 나온 겹치는 css들에 의해 오버라이드 될 수 있어서
+맨뒤에 작성하는 것이 좋다
+ */
+/* Media Queries */
+/* 620px 보다 크면 */
+@media (min-width: 620px) {
+    .content-container{
+        padding: 30px 0 24px;
+    }
+    .content{
+        gap:24px;
+    }
+    .stories{
+        border: 1px solid #DBDBDB;
+        border-radius: 4px;
+    }
+    .stories::after{
+        content:none;
+    }
+    .posts{
+        gap: 24px;
+    }
+    .post{
+        border: 1px solid #DBDBDB;
+        border-radius: 4px;
+    }
+    .post_footer{
+        padding: 4px 8px 12px;
+    }
+    .post_date-time{
+        margin-top: 6px;
+    }
+}
+@media (min-width: 1024px){
+    .main-container{
+        background-color: #fafafa;
+    }
+    .content{
+        margin: unset;
+    }
 }
