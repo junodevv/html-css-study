@@ -11,3 +11,6 @@
 ## 구현 조건
 - [x] 마우스로 호버시 영화의 이미지 사이즈를 크게 해준다.
 - [x] Flex Box 또는 Grid CSS 를 사용한다.
+
+## 구현 완료
+<img width="700" alt="image" src="https://github.com/junodevv/html-css-study/assets/126752196/92b56a5c-cb85-41e5-94b6-429f07fe34a0">
