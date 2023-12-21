@@ -9,5 +9,5 @@
 <img width="600" src="https://github.com/junodevv/html-css-study/assets/126752196/22052009-7fd8-4f96-85d9-08ad37def2fe">
 
 ## 구현 조건
-- [ ] 마우스로 호버시 영화의 이미지 사이즈를 크게 해준다.
-- [ ] Flex Box 또는 Grid CSS 를 사용한다.
+- [x] 마우스로 호버시 영화의 이미지 사이즈를 크게 해준다.
+- [x] Flex Box 또는 Grid CSS 를 사용한다.
